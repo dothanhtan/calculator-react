@@ -48,12 +48,6 @@ class Calculator extends React.Component {
                 this.setState({question: str});
                 break;
             }
-            case 'x':{
-                var st = this.state.question;
-                st = st.replace("x", "*");
-                this.setState({question: st});
-                break;
-            }
             default: {
                 this.setState({ question: this.state.question += value})
                 break;
@@ -82,7 +76,7 @@ class Calculator extends React.Component {
                     <div className="button-row">
                         <Button label={'6'} handleClick={this.handleClick}/>
                         <Button label={'7'} handleClick={this.handleClick}/>
-                        <Button className="btnaction" label={'x'} handleClick={this.handleClick}/>
+                        <Button className="btnaction" label={'*'} handleClick={this.handleClick}/>
                     </div>
                     <div className="button-row">
                         <Button label={'4'} handleClick={this.handleClick}/>
