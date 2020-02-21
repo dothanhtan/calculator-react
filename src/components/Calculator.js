@@ -37,12 +37,12 @@ class Calculator extends React.Component {
                     break;
                 }
             }
-            case 'Clear': {
+            case 'AC': {
                 this.setState({ question: '', answer: '' });
                 break;
             }
 
-            case 'Delete': {
+            case 'DEL': {
                 var str = this.state.question;
                 str = str.substr(0,str.length-1);
                 this.setState({question: str});
@@ -64,8 +64,8 @@ class Calculator extends React.Component {
                 {console.log(this.state)}
                     <OutputScreen question={this.state.question} answer={this.state.answer}/>
                     <div className="button-row">
-                        <Button className="btnaction" label={'Clear'} handleClick = {this.handleClick}/>
-                        <Button className="btnaction" label={'Delete'} handleClick={this.handleClick}/>
+                        <Button className="btnaction" label={'AC'} handleClick = {this.handleClick}/>
+                        <Button className="btnaction" label={'DEL'} handleClick={this.handleClick}/>
                         <Button className="btnaction" label={'.'} handleClick={this.handleClick}/>
                     </div>
                     <div className="button-row">
